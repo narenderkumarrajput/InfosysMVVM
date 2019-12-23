@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,12 @@
 		BD45D69323B0B7CF00F49D27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD45D69223B0B7CF00F49D27 /* Assets.xcassets */; };
 		BD45D69623B0B7CF00F49D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD45D69423B0B7CF00F49D27 /* LaunchScreen.storyboard */; };
 		BD45D6A123B0B7D000F49D27 /* InfosysMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6A023B0B7D000F49D27 /* InfosysMVVMTests.swift */; };
+		BD45D6B023B12ED700F49D27 /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6AF23B12ED700F49D27 /* CountryInfo.swift */; };
+		BD45D6B423B133E300F49D27 /* CountryInfoTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6B323B133E300F49D27 /* CountryInfoTableViewModel.swift */; };
+		BD45D6B623B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6B523B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift */; };
+		BD45D6B823B1385700F49D27 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6B723B1385700F49D27 /* ApiService.swift */; };
+		BD45D6BB23B1453900F49D27 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6BA23B1453900F49D27 /* CountryData.swift */; };
+		BD45D6BD23B1487700F49D27 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6BC23B1487700F49D27 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,12 @@
 		BD45D69C23B0B7D000F49D27 /* InfosysMVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfosysMVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD45D6A023B0B7D000F49D27 /* InfosysMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosysMVVMTests.swift; sourceTree = "<group>"; };
 		BD45D6A223B0B7D000F49D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD45D6AF23B12ED700F49D27 /* CountryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfo.swift; sourceTree = "<group>"; };
+		BD45D6B323B133E300F49D27 /* CountryInfoTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoTableViewModel.swift; sourceTree = "<group>"; };
+		BD45D6B523B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		BD45D6B723B1385700F49D27 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		BD45D6BA23B1453900F49D27 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
+		BD45D6BC23B1487700F49D27 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		CB8B88BAC6BD7FF94751A091 /* Pods-InfosysMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfosysMVVM.release.xcconfig"; path = "Target Support Files/Pods-InfosysMVVM/Pods-InfosysMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		D023AABC00BDD09E7826BD00 /* Pods-InfosysMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfosysMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-InfosysMVVMTests/Pods-InfosysMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0389387513D451B0CB7A7B4 /* Pods_InfosysMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfosysMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,7 +95,6 @@
 				65125BC867A0AEF62F04AAEE /* Pods-InfosysMVVMTests.debug.xcconfig */,
 				D023AABC00BDD09E7826BD00 /* Pods-InfosysMVVMTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -110,11 +121,13 @@
 		BD45D68823B0B7CA00F49D27 /* InfosysMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				BD45D6B923B1448D00F49D27 /* shared */,
+				BD45D6AE23B1281100F49D27 /* model */,
+				BD45D6AD23B127F900F49D27 /* viewModel */,
+				BD45D6AC23B127E300F49D27 /* service */,
+				BD45D6AB23B127D100F49D27 /* view */,
 				BD45D68923B0B7CA00F49D27 /* AppDelegate.swift */,
-				BD45D68D23B0B7CA00F49D27 /* ViewController.swift */,
-				BD45D68F23B0B7CA00F49D27 /* Main.storyboard */,
 				BD45D69223B0B7CF00F49D27 /* Assets.xcassets */,
-				BD45D69423B0B7CF00F49D27 /* LaunchScreen.storyboard */,
 				BD45D69723B0B7CF00F49D27 /* Info.plist */,
 			);
 			path = InfosysMVVM;
@@ -127,6 +140,66 @@
 				BD45D6A223B0B7D000F49D27 /* Info.plist */,
 			);
 			path = InfosysMVVMTests;
+			sourceTree = "<group>";
+		};
+		BD45D6AB23B127D100F49D27 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				BD45D6B123B12FEA00F49D27 /* Storyboard */,
+				BD45D6B223B12FEA00F49D27 /* views */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		BD45D6AC23B127E300F49D27 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				BD45D6B723B1385700F49D27 /* ApiService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		BD45D6AD23B127F900F49D27 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD45D6B323B133E300F49D27 /* CountryInfoTableViewModel.swift */,
+				BD45D6B523B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		BD45D6AE23B1281100F49D27 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				BD45D6AF23B12ED700F49D27 /* CountryInfo.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		BD45D6B123B12FEA00F49D27 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BD45D69423B0B7CF00F49D27 /* LaunchScreen.storyboard */,
+				BD45D68F23B0B7CA00F49D27 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BD45D6B223B12FEA00F49D27 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				BD45D68D23B0B7CA00F49D27 /* ViewController.swift */,
+				BD45D6BC23B1487700F49D27 /* CustomCell.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		BD45D6B923B1448D00F49D27 /* shared */ = {
+			isa = PBXGroup;
+			children = (
+				BD45D6BA23B1453900F49D27 /* CountryData.swift */,
+			);
+			path = shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +371,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD45D68E23B0B7CA00F49D27 /* ViewController.swift in Sources */,
+				BD45D6B023B12ED700F49D27 /* CountryInfo.swift in Sources */,
+				BD45D6BB23B1453900F49D27 /* CountryData.swift in Sources */,
+				BD45D6B823B1385700F49D27 /* ApiService.swift in Sources */,
+				BD45D6B423B133E300F49D27 /* CountryInfoTableViewModel.swift in Sources */,
+				BD45D6B623B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift in Sources */,
+				BD45D6BD23B1487700F49D27 /* CustomCell.swift in Sources */,
 				BD45D68A23B0B7CA00F49D27 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

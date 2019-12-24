@@ -21,6 +21,9 @@
 		BD45D6B823B1385700F49D27 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6B723B1385700F49D27 /* ApiService.swift */; };
 		BD45D6BB23B1453900F49D27 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6BA23B1453900F49D27 /* CountryData.swift */; };
 		BD45D6BD23B1487700F49D27 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6BC23B1487700F49D27 /* CustomCell.swift */; };
+		BD9B3FE623B1D1EB001CF398 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B3FE523B1D1EB001CF398 /* DetailViewController.swift */; };
+		BD9B3FE923B1D98F001CF398 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B3FE823B1D98F001CF398 /* Utility.swift */; };
+		BD9B3FEB23B1DCB0001CF398 /* ApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B3FEA23B1DCB0001CF398 /* ApiServiceTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		BD45D6B723B1385700F49D27 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		BD45D6BA23B1453900F49D27 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		BD45D6BC23B1487700F49D27 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		BD9B3FE523B1D1EB001CF398 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BD9B3FE823B1D98F001CF398 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		BD9B3FEA23B1DCB0001CF398 /* ApiServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTest.swift; sourceTree = "<group>"; };
 		CB8B88BAC6BD7FF94751A091 /* Pods-InfosysMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfosysMVVM.release.xcconfig"; path = "Target Support Files/Pods-InfosysMVVM/Pods-InfosysMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		D023AABC00BDD09E7826BD00 /* Pods-InfosysMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfosysMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-InfosysMVVMTests/Pods-InfosysMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0389387513D451B0CB7A7B4 /* Pods_InfosysMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfosysMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,6 +127,7 @@
 		BD45D68823B0B7CA00F49D27 /* InfosysMVVM */ = {
 			isa = PBXGroup;
 			children = (
+				BD9B3FE723B1D97B001CF398 /* Helper */,
 				BD45D6B923B1448D00F49D27 /* shared */,
 				BD45D6AE23B1281100F49D27 /* model */,
 				BD45D6AD23B127F900F49D27 /* viewModel */,
@@ -138,6 +145,7 @@
 			children = (
 				BD45D6A023B0B7D000F49D27 /* InfosysMVVMTests.swift */,
 				BD45D6A223B0B7D000F49D27 /* Info.plist */,
+				BD9B3FEA23B1DCB0001CF398 /* ApiServiceTest.swift */,
 			);
 			path = InfosysMVVMTests;
 			sourceTree = "<group>";
@@ -190,6 +198,7 @@
 			children = (
 				BD45D68D23B0B7CA00F49D27 /* ViewController.swift */,
 				BD45D6BC23B1487700F49D27 /* CustomCell.swift */,
+				BD9B3FE523B1D1EB001CF398 /* DetailViewController.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -200,6 +209,14 @@
 				BD45D6BA23B1453900F49D27 /* CountryData.swift */,
 			);
 			path = shared;
+			sourceTree = "<group>";
+		};
+		BD9B3FE723B1D97B001CF398 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				BD9B3FE823B1D98F001CF398 /* Utility.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +387,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9B3FE923B1D98F001CF398 /* Utility.swift in Sources */,
+				BD9B3FE623B1D1EB001CF398 /* DetailViewController.swift in Sources */,
 				BD45D68E23B0B7CA00F49D27 /* ViewController.swift in Sources */,
 				BD45D6B023B12ED700F49D27 /* CountryInfo.swift in Sources */,
 				BD45D6BB23B1453900F49D27 /* CountryData.swift in Sources */,
@@ -385,6 +404,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9B3FEB23B1DCB0001CF398 /* ApiServiceTest.swift in Sources */,
 				BD45D6A123B0B7D000F49D27 /* InfosysMVVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

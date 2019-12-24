@@ -25,15 +25,6 @@ class CustomCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    private func verifyUrl (urlString: String?) -> Bool {
-        if let urlString = urlString {
-            if let url = URL(string: urlString) {
-                return UIApplication.shared.canOpenURL(url)
-            }
-        }
-        return false
-    }
-    
     func setData(_ countryInfoVM: CountryInfoTableViewCellViewModel) {
         self.titleLbl.text = countryInfoVM.title
         self.descLbl.text = countryInfoVM.description

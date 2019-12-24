@@ -18,11 +18,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initViewModel()
+        self.title = ""
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailSegue" {
+            if let destinationViewController = segue.destination as? DetailViewController {
+                let indexPath = self.tableView.indexPathForSelectedRow!
+                destinationViewController.detailVM = viewModel.getCellViewModel(at:indexPath)
+            }
+        }
     }
     
     private func initViewModel() {
         viewModel.reloadTableViewClosure = { [weak self] () in
             DispatchQueue.main.async {
+                self?.title = CountryData.shared.title
                 self?.tableView.reloadData()
             }
         }
@@ -46,6 +57,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.numberOfCells
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

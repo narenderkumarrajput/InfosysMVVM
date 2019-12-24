@@ -11,8 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    lazy var viewModel: CountryInfoTableViewModel = {
-        return CountryInfoTableViewModel()
+    lazy var viewModel: TableViewModel = {
+        return TableViewModel()
     }()
 
     override func viewDidLoad() {

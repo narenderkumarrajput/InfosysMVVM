@@ -14,14 +14,21 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
-    var detailVM: CountryInfoTableViewCellViewModel? = nil
+    var detailVM: CellViewModel? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "More Detail"
         
-        titleLabel.text = detailVM?.title ?? ""
-        descriptionTextView.text = detailVM?.description ?? ""
-        if let imgUrl = detailVM?.imageHref {
+        if let _ = detailVM {
+            self.setupUI(detailVM: self.detailVM!)
+        }
+    }
+    
+    func setupUI(detailVM: CellViewModel) {
+        titleLabel.text = detailVM.title ?? ""
+        descriptionTextView.text = detailVM.description ?? ""
+        if let imgUrl = detailVM.imageHref {
             let url = URL(string: imgUrl)
             if url != nil {
                 SDWebImageManager.shared.loadImage(with: url, options: .continueInBackground, context: nil, progress: nil) { (image, data, erroe, SDImageCacheType, isFinshed, uRL) in
@@ -34,5 +41,5 @@ class DetailViewController: UIViewController {
             }
         }
     }
-
+    
 }

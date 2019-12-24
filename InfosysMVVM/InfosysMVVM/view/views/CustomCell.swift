@@ -25,7 +25,7 @@ class CustomCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setData(_ countryInfoVM: CountryInfoTableViewCellViewModel) {
+    func setData(_ countryInfoVM: CellViewModel) {
         self.titleLbl.text = countryInfoVM.title
         self.descLbl.text = countryInfoVM.description
         if let _ = countryInfoVM.imageHref {

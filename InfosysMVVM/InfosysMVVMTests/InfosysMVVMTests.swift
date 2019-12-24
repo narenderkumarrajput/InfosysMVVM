@@ -11,12 +11,12 @@ import XCTest
 
 class InfosysMVVMTests: XCTestCase {
     
-    var sut: CountryInfoTableViewModel!
+    var sut: TableViewModel!
     var mockAPIService: MockApiService!
 
     override func setUp() {
         mockAPIService = MockApiService()
-        sut = CountryInfoTableViewModel(apiService: mockAPIService)
+        sut = TableViewModel(apiService: mockAPIService)
     }
 
     override func tearDown() {

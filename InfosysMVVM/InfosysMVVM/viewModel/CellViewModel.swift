@@ -11,7 +11,7 @@ import UIKit
 
 public typealias ImageDownloadCompletionClosure = (_ imageData: NSData ) -> Void
 
-class CountryInfoTableViewCellViewModel {
+class CellViewModel {
 
     let title:String?
     let description:String?

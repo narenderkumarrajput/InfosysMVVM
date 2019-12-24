@@ -130,7 +130,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QHk-0S-vgg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QHk-0S-vgg">
                                 <rect key="frame" x="37" y="179" width="339" height="339"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QHk-0S-vgg" secondAttribute="height" multiplier="1:1" id="mD4-Ne-H8l"/>
@@ -157,7 +157,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gsb-DE-8yy"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Messier Detail" id="POg-e8-dTr"/>
+                    <navigationItem key="navigationItem" title="Messier Detail" id="POg-e8-dTr">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lul-0S-Ons"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="descriptionTextView" destination="InR-ek-Rpr" id="9R0-ED-sRN"/>
                         <outlet property="imageView" destination="QHk-0S-vgg" id="Yqb-hR-ESt"/>

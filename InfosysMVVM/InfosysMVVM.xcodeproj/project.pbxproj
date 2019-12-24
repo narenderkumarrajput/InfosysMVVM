@@ -16,14 +16,15 @@
 		BD45D69623B0B7CF00F49D27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD45D69423B0B7CF00F49D27 /* LaunchScreen.storyboard */; };
 		BD45D6A123B0B7D000F49D27 /* InfosysMVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6A023B0B7D000F49D27 /* InfosysMVVMTests.swift */; };
 		BD45D6B023B12ED700F49D27 /* CountryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6AF23B12ED700F49D27 /* CountryInfo.swift */; };
-		BD45D6B423B133E300F49D27 /* CountryInfoTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6B323B133E300F49D27 /* CountryInfoTableViewModel.swift */; };
-		BD45D6B623B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6B523B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift */; };
+		BD45D6B423B133E300F49D27 /* TableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6B323B133E300F49D27 /* TableViewModel.swift */; };
+		BD45D6B623B1350A00F49D27 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6B523B1350A00F49D27 /* CellViewModel.swift */; };
 		BD45D6B823B1385700F49D27 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6B723B1385700F49D27 /* ApiService.swift */; };
 		BD45D6BB23B1453900F49D27 /* CountryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6BA23B1453900F49D27 /* CountryData.swift */; };
 		BD45D6BD23B1487700F49D27 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD45D6BC23B1487700F49D27 /* CustomCell.swift */; };
 		BD9B3FE623B1D1EB001CF398 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B3FE523B1D1EB001CF398 /* DetailViewController.swift */; };
 		BD9B3FE923B1D98F001CF398 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B3FE823B1D98F001CF398 /* Utility.swift */; };
 		BD9B3FEB23B1DCB0001CF398 /* ApiServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B3FEA23B1DCB0001CF398 /* ApiServiceTest.swift */; };
+		BD9B3FED23B1E3C9001CF398 /* DetailViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9B3FEC23B1E3C9001CF398 /* DetailViewTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,14 +51,15 @@
 		BD45D6A023B0B7D000F49D27 /* InfosysMVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfosysMVVMTests.swift; sourceTree = "<group>"; };
 		BD45D6A223B0B7D000F49D27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD45D6AF23B12ED700F49D27 /* CountryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfo.swift; sourceTree = "<group>"; };
-		BD45D6B323B133E300F49D27 /* CountryInfoTableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoTableViewModel.swift; sourceTree = "<group>"; };
-		BD45D6B523B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryInfoTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		BD45D6B323B133E300F49D27 /* TableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewModel.swift; sourceTree = "<group>"; };
+		BD45D6B523B1350A00F49D27 /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		BD45D6B723B1385700F49D27 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		BD45D6BA23B1453900F49D27 /* CountryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryData.swift; sourceTree = "<group>"; };
 		BD45D6BC23B1487700F49D27 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		BD9B3FE523B1D1EB001CF398 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		BD9B3FE823B1D98F001CF398 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		BD9B3FEA23B1DCB0001CF398 /* ApiServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServiceTest.swift; sourceTree = "<group>"; };
+		BD9B3FEC23B1E3C9001CF398 /* DetailViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewTest.swift; sourceTree = "<group>"; };
 		CB8B88BAC6BD7FF94751A091 /* Pods-InfosysMVVM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfosysMVVM.release.xcconfig"; path = "Target Support Files/Pods-InfosysMVVM/Pods-InfosysMVVM.release.xcconfig"; sourceTree = "<group>"; };
 		D023AABC00BDD09E7826BD00 /* Pods-InfosysMVVMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InfosysMVVMTests.release.xcconfig"; path = "Target Support Files/Pods-InfosysMVVMTests/Pods-InfosysMVVMTests.release.xcconfig"; sourceTree = "<group>"; };
 		D0389387513D451B0CB7A7B4 /* Pods_InfosysMVVM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InfosysMVVM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +148,7 @@
 				BD45D6A023B0B7D000F49D27 /* InfosysMVVMTests.swift */,
 				BD45D6A223B0B7D000F49D27 /* Info.plist */,
 				BD9B3FEA23B1DCB0001CF398 /* ApiServiceTest.swift */,
+				BD9B3FEC23B1E3C9001CF398 /* DetailViewTest.swift */,
 			);
 			path = InfosysMVVMTests;
 			sourceTree = "<group>";
@@ -170,8 +173,8 @@
 		BD45D6AD23B127F900F49D27 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BD45D6B323B133E300F49D27 /* CountryInfoTableViewModel.swift */,
-				BD45D6B523B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift */,
+				BD45D6B323B133E300F49D27 /* TableViewModel.swift */,
+				BD45D6B523B1350A00F49D27 /* CellViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -393,8 +396,8 @@
 				BD45D6B023B12ED700F49D27 /* CountryInfo.swift in Sources */,
 				BD45D6BB23B1453900F49D27 /* CountryData.swift in Sources */,
 				BD45D6B823B1385700F49D27 /* ApiService.swift in Sources */,
-				BD45D6B423B133E300F49D27 /* CountryInfoTableViewModel.swift in Sources */,
-				BD45D6B623B1350A00F49D27 /* CountryInfoTableViewCellViewModel.swift in Sources */,
+				BD45D6B423B133E300F49D27 /* TableViewModel.swift in Sources */,
+				BD45D6B623B1350A00F49D27 /* CellViewModel.swift in Sources */,
 				BD45D6BD23B1487700F49D27 /* CustomCell.swift in Sources */,
 				BD45D68A23B0B7CA00F49D27 /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9B3FEB23B1DCB0001CF398 /* ApiServiceTest.swift in Sources */,
+				BD9B3FED23B1E3C9001CF398 /* DetailViewTest.swift in Sources */,
 				BD45D6A123B0B7D000F49D27 /* InfosysMVVMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

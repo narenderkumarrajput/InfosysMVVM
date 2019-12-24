@@ -12,7 +12,7 @@ class TableViewModel {
     
     var apiService:ApiService
     private var countryInfo:[CountryInfo] = [CountryInfo]()
-    private var cellViewModels:[CountryInfoTableViewCellViewModel] = [CountryInfoTableViewCellViewModel]() {
+    private var cellViewModels:[CellViewModel] = [CellViewModel]() {
         didSet {
             self.reloadTableViewClosure?()
         }
@@ -40,17 +40,17 @@ class TableViewModel {
         }
     }
     
-    func getCellViewModel( at indexPath: IndexPath ) -> CountryInfoTableViewCellViewModel {
+    func getCellViewModel( at indexPath: IndexPath ) -> CellViewModel {
         return cellViewModels[indexPath.row]
     }
     
-    func createCellViewModel( countryInfo: CountryInfo ) -> CountryInfoTableViewCellViewModel {
-        return CountryInfoTableViewCellViewModel( title: countryInfo.title ?? "", description: countryInfo.description ?? "", imageHref: countryInfo.imageHref ?? "")
+    func createCellViewModel( countryInfo: CountryInfo ) -> CellViewModel {
+        return CellViewModel( title: countryInfo.title ?? "", description: countryInfo.description ?? "", imageHref: countryInfo.imageHref ?? "")
     }
     
     private func processFetchedRepo( countryInfo: [CountryInfo] ) {
         self.countryInfo = countryInfo // Cache
-        var vms = [CountryInfoTableViewCellViewModel]()
+        var vms = [CellViewModel]()
         for repo in countryInfo {
             vms.append( createCellViewModel(countryInfo: repo) )
         }

@@ -89,7 +89,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="D2B-MB-da5"/>
+                    <navigationItem key="navigationItem" id="D2B-MB-da5">
+                        <barButtonItem key="rightBarButtonItem" title="Refresh" image="arrow.clockwise" catalog="system" id="zhD-c9-Gdu">
+                            <connections>
+                                <action selector="refreshAction:" destination="BYZ-38-t0r" id="pHy-FU-KLW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="I8W-35-xUP" id="5xh-Yb-zZa"/>
                     </connections>
@@ -171,4 +177,7 @@
             <point key="canvasLocation" x="2008.6956521739132" y="81.696428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.clockwise" catalog="system" width="56" height="64"/>
+    </resources>
 </document>

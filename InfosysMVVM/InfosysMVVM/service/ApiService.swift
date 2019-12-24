@@ -14,6 +14,7 @@ class ApiService {
     
     init() {}
     
+    //MARK:- Fetch Data Api
     func fetchAllCountryInfo(onResult:@escaping (_ isSuccess: Bool, _ repos: [CountryInfo]?, _ error: String?)->()){
         
         let url = URL(string: "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json")

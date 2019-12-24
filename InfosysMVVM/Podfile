@@ -12,6 +12,9 @@ target 'InfosysMVVM' do
   
   # Image
   pod 'SDWebImage', '~> 5.0'
+  
+  #pull to refresh and load more
+  pod 'SVPullToRefresh'
 
 
   target 'InfosysMVVMTests' do

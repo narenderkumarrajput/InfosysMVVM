@@ -11,6 +11,7 @@ import SDWebImage
 
 class CustomCell: UITableViewCell {
     
+    //MARK:- Outlet and iVar
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var descLbl: UILabel!
     @IBOutlet weak var imgView: UIImageView!
@@ -25,6 +26,7 @@ class CustomCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    //MARK:- Set Data on cell
     func setData(_ countryInfoVM: CellViewModel) {
         self.titleLbl.text = countryInfoVM.title
         self.descLbl.text = countryInfoVM.description

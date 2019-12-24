@@ -11,11 +11,13 @@ import SDWebImage
 
 class DetailViewController: UIViewController {
 
+    //MARK:- Outlet and iVar
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     var detailVM: CellViewModel? = nil
     
+    //MARK:- ViewController lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "More Detail"
@@ -25,7 +27,8 @@ class DetailViewController: UIViewController {
         }
     }
     
-    func setupUI(detailVM: CellViewModel) {
+    //MARK:- Setup UI Data
+    private func setupUI(detailVM: CellViewModel) {
         titleLabel.text = detailVM.title ?? ""
         descriptionTextView.text = detailVM.description ?? ""
         if let imgUrl = detailVM.imageHref {

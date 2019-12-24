@@ -7,17 +7,21 @@
 //
 
 import UIKit
+import SVPullToRefresh
 
 class ViewController: UIViewController {
     
+    //MARK:- Outlet and iVar
     @IBOutlet weak var tableView: UITableView!
     lazy var viewModel: TableViewModel = {
         return TableViewModel()
     }()
-
+    
+    //MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        initViewModel()
+        self.initViewModel()
+        self.addPullWithTable()
         self.title = ""
     }
     
@@ -30,18 +34,35 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK:- Init ViewModel
     private func initViewModel() {
         viewModel.reloadTableViewClosure = { [weak self] () in
             DispatchQueue.main.async {
                 self?.title = CountryData.shared.title
+                self?.tableView.pullToRefreshView.stopAnimating()
                 self?.tableView.reloadData()
             }
         }
         viewModel.initFetchData()
     }
     
+    //MARK:- Pull to refresh and load more
+    private func addPullWithTable() {
+        tableView.addPullToRefresh {
+            self.initViewModel()
+        }
+        tableView.showsInfiniteScrolling = false
+    }
+    
+    //MARK:- IBActions
+    @IBAction func refreshAction(_ sender: UIBarButtonItem) {
+        self.initViewModel()
+    }
+    
+    
 }
 
+//MARK:- TableView Delegate DataSource
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -9,7 +9,7 @@
 import Foundation
 
 class TableViewModel {
-    
+    //MARK:- iVar and property
     var apiService:ApiService
     private var countryInfo:[CountryInfo] = [CountryInfo]()
     private var cellViewModels:[CellViewModel] = [CellViewModel]() {
@@ -23,11 +23,12 @@ class TableViewModel {
     }
     var reloadTableViewClosure: (()->())?
     
-    
+    //MARK:- Init
     init(apiService:ApiService = ApiService()) {
         self.apiService=apiService
     }
     
+    //MARK:- Fetch Data from ApiService
     func initFetchData() {
         apiService.fetchAllCountryInfo { (isSuccess, countryInfoList, errorString) in
             if(isSuccess) {
@@ -40,6 +41,7 @@ class TableViewModel {
         }
     }
     
+    //MARK:- ViewModel for cell
     func getCellViewModel( at indexPath: IndexPath ) -> CellViewModel {
         return cellViewModels[indexPath.row]
     }
